@@ -7,13 +7,24 @@
 }
 
 html {
+  position: relative;
   background-image: url(../img/bg.jpg);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #3d3d3d;
   font-size: 62.5%;
   font-family: "Poppins", "Noto Sans JP", sans-serif;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .38);
+    content: "";
+  }
 }
 a {
   transition: opacity .3s;
